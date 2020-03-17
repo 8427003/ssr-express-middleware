@@ -1,0 +1,25 @@
+{
+  "name": "@sukbta/ssr-express-middleware",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8427003/ssr-express-middleware.git"
+  },
+  "keywords": [
+    "ssr"
+  ],
+  "author": "coco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/8427003/ssr-express-middleware/issues"
+  },
+  "homepage": "https://github.com/8427003/ssr-express-middleware#readme",
+  "dependencies": {
+    "@sukbta/ssr-stats-data-helper": "0.0.1"
+  }
+}
