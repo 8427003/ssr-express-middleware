@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/8427003/ssr-express-middleware#readme",
   "dependencies": {
-    "@sukbta/ssr-stats-data-helper": "0.0.1"
+    "@sukbta/ssr-stats-data-helper": "^0.0.2"
   }
 }
