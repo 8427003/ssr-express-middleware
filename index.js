@@ -7,21 +7,24 @@ module.exports = function ({ root } = {}) {
     const SSR_APP = stats.requireAll(initedStats, root);
 
     return async function (req, res, next) {
-        console.log('===========backend entry===========')
-        const matchResult = await SSR_APP.loadReady(req.path);
-
-        console.log('===========backend send ===========')
+        console.log(`==========request: ${req.path}==========`)
         try {
-            const pageContent = SSR_APP.ReactDOMServer.renderToString(
-                SSR_APP.React.createElement(SSR_APP.App, { routerProps: {location: req.path} })
-            );
+            console.log('\n==========loadReady start==========');
+            const matchResult = await SSR_APP.loadReady(req.path);
+            console.log('==========loadReady end==========\n');
 
-            res.send(stats.getIndexHtml({ htmlTpl, matchResult, pageContent, initedStats }));
+            if(matchResult) {
+                const pageContent = SSR_APP.ReactDOMServer.renderToString(
+                    SSR_APP.React.createElement(SSR_APP.App, { routerProps: {location: req.path} })
+                );
+                res.send(stats.getIndexHtml({ htmlTpl, matchResult, pageContent, initedStats }));
+            }
         }
         catch(e) {
-            console.error(e);
+            console.error(e, 'error');
         }
-        console.log('===========backend end===========')
+        console.log('==========respose end==========')
         next();
     }
 }
+
