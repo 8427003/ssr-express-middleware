@@ -1,6 +1,6 @@
 {
   "name": "@sukbta/ssr-express-middleware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/8427003/ssr-express-middleware#readme",
   "dependencies": {
-    "@sukbta/ssr-stats-data-helper": "^0.0.2"
+    "@sukbta/ssr-stats-data-helper": "^1.0.2"
   }
 }
